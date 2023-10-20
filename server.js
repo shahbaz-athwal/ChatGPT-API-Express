@@ -7,7 +7,7 @@ const messages = []
 const mySecret = process.env['SECRET_KEY']
 
 const openai = new OpenAI({
-  apiKey: mySecret, // defaults to process.env["OPENAI_API_KEY"]
+  apiKey: mySecret, 
 });
 
 async function main(input) {
@@ -18,15 +18,15 @@ async function main(input) {
     model: 'gpt-3.5-turbo',
   });
 
-  // console.log(completion.choices);
+  
   return completion.choices[0]?.message?.content 
 }
 
 
-app.use(express.json()) // for parsing application/json
+app.use(express.json()) 
 app.use(express.urlencoded({ extended: true }))
 
-// Render Html File
+
 app.get('/', function(req, res) {
   res.sendFile(path.join(__dirname, 'templates/index.html'));
 });
@@ -40,5 +40,4 @@ app.post('/api', async function (req, res, next) {
 
 app.listen(port, () => {
   console.log("Running...")
-  // Code.....
 })
