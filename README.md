@@ -1,0 +1,1 @@
+To start a conversation, simply click the "Start" button and begin speaking. The AI will display its response on the screen once it's ready. You can end the voice input by clicking the "Stop" button.
